@@ -1,35 +1,0 @@
-
-app/mailers/application_mailer.rb,67
-class ApplicationMailer < ActionMailer::BaseApplicationMailer1,0
-
-app/models/application_record.rb,67
-class ApplicationRecord < ActiveRecord::BaseApplicationRecord1,0
-
-app/jobs/application_job.rb,58
-class ApplicationJob < ActiveJob::BaseApplicationJob1,0
-
-app/controllers/application_controller.rb,78
-class ApplicationController < ActionController::APIApplicationController1,0
-
-app/channels/application_cable/connection.rb,195
-module ApplicationCableApplicationCable1,0
-  class Connection < ActionCable::Connection::BaseConnection2,0
-  class Connection < ActionCable::Connection::BaseApplicationCable::Connection2,0
-
-app/channels/application_cable/channel.rb,177
-module ApplicationCableApplicationCable1,0
-  class Channel < ActionCable::Channel::BaseChannel2,0
-  class Channel < ActionCable::Channel::BaseApplicationCable::Channel2,0
-
-test/test_helper.rb,101
-class ActiveSupport::TestCaseTestCase5,0
-class ActiveSupport::TestCaseActiveSupport::TestCase5,0
-
-test/channels/application_cable/connection_test.rb,206
-class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCaseConnectionTest3,0
-class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCaseApplicationCable::ConnectionTest3,0
-
-config/application.rb,162
-module JsonApiAppJsonApiApp22,0
-  class Application < Rails::ApplicationApplication23,0
-  class Application < Rails::ApplicationJsonApiApp::Application23,0
