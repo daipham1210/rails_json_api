@@ -17,13 +17,11 @@ module RenderJsonapi
       serializer_class_name = compute_serializer_name(serializer_key)
       serializer_options = build_fast_jsonapi_options(options)
       serializer_options[:links] = links_object(options[:meta]) if options[:meta] || options[:paginate] == true
-      
+
       serialized_collection = serializer_class_name.new(collection, serializer_options)
       status = options[:status] || :ok
-      byebug
       render jsonapi: serialized_collection, status: status
     end
-
   end
 
   private
@@ -46,7 +44,7 @@ module RenderJsonapi
 
     collection_class.base_class.name.to_sym
   end
-  
+
   def links_object(meta)
     return pagy_metadata(@pagy) unless meta
 
@@ -63,9 +61,9 @@ module RenderJsonapi
       params: options[:params] || {},
       meta: options[:meta] || {},
     }
-    
+
     # json_options[:params][:current_user] = current_user
-    
+
     includes = options[:include]
     if includes.present?
       json_options[:include] = includes_array(includes)
